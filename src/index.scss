@@ -58,13 +58,22 @@ img.nav-item {
 
 .project-container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   padding: 0 calc(50% - 420px);
+  grid-gap: 80px;
+
+  @include mq($vp-sm) {
+    padding: 100px;
+  }
+
+  @include mq($vp-md) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 0 calc(50% - 420px);
+  }
 }
 
 .project-item {
-  padding: 5px 10px 5px 10px;
-  margin-top: 100px;
+  text-align: center;
 }
 
 .project-button {
@@ -120,6 +129,12 @@ img.nav-item {
 #colorful-image {
   max-width: 100%;
   width: 100%;
+}
+h3 {
+  text-align: center;
+}
+h1 {
+  text-align: center;
 }
 
 #test-image {
