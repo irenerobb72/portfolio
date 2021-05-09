@@ -81,6 +81,15 @@ img.nav-item {
   justify-content: center;
 }
 
+.about-container {
+  background-color: #fdbcb4;
+  padding: 50px 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
 .content-container {
   display: flex;
   flex-direction: column;
@@ -113,30 +122,9 @@ img.nav-item {
   width: 100%;
 }
 
-.about-container {
-  width: 100%;
-  display: flex;
-  margin-top: 100px;
-}
-
-.about-text {
-  display: inline;
-  padding: 100px;
-  background-color: #fdbcb4;
-  width: 50%;
-}
-
-.about-image {
-  display: inline;
-  padding-left: 20px;
-  padding-right: 50px;
-  background-color: #fff8dc;
-  width: 50%;
-}
-
 #test-image {
-  height: 450px;
-  width: 350px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .footer-container {

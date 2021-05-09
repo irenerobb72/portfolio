@@ -60,6 +60,7 @@ function App() {
           </div>
           <h1>Projects</h1>
           <div className="project-container">
+            
             <div className="project-item">
               <img src={logo} alt="logopoint2" />
               <div className="project-text">
@@ -112,6 +113,7 @@ function App() {
             </div>
           </div>
           <div className="about-container">
+          <div className="content-container">
             <div className="about-image">
               <img src={art} alt="logopoint3" id="test-image" />
             </div>
@@ -124,6 +126,7 @@ function App() {
                 and my other skills are SQL, Java, Python, and Bash.{" "}
               </p>
               <button className="project-button">Resume</button>
+            </div>
             </div>
           </div>
         </Route>
