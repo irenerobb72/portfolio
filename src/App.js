@@ -1,10 +1,11 @@
-import "./App.css";
+import "./index.scss";
 import logo from "./images/irene-logo.png";
 import art from "./images/color-art.png";
 import { Art } from "./pages/Art";
 import { Route, Switch } from "react-router";
 import { Travel } from "./pages/Travel";
 import { Project } from "./pages/Projects";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -15,13 +16,19 @@ function App() {
             <img src={logo} alt="logo" id="logo" />
           </div>
           <div className="nav-item">
-            <li>About Me</li>
+            <li>
+              <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>About Me</Link>
+            </li>
           </div>
           <div className="nav-item">
-            <li>Travel</li>
+            <li>
+              <Link to="/travel" style={{ textDecoration: 'none', color: 'black' }}>Travel</Link>
+            </li>
           </div>
           <div className="nav-item">
-            <li>Art</li>
+            <li>
+              <Link to="/art" style={{ textDecoration: 'none', color: 'black'}}>Art</Link>
+            </li>
           </div>
         </ul>
       </div>
@@ -37,16 +44,18 @@ function App() {
         </Route>
         <Route path="/">
           <div className="main-welcome">
-            <div className="main-text">
-              <h1>My name is Irene Robb</h1>
-              <p>
-                I am an artist, a coder, a student, a video gamer and a
-                traveler. Please explore the pages on my site if you wish to
-                learn more about me!
-              </p>
-            </div>
-            <div className="main-image">
-              <img src={art} alt="colorful" id="colorful-image" />
+            <div className="content-container">
+              <div className="main-text">
+                <h1>My name is Irene Robb</h1>
+                <p>
+                  I am an artist, a coder, a student, a video gamer and a
+                  traveler. Please explore the pages on my site if you wish to
+                  learn more about me!
+                </p>
+              </div>
+              <div className="main-image">
+                <img src={art} alt="colorful" id="colorful-image" />
+              </div>
             </div>
           </div>
           <h1>Projects</h1>

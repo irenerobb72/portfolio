@@ -1,3 +1,15 @@
+$vp-xs: 480px;
+$vp-sm: 767px;
+$vp-md: 1024px;
+$vp-lg: 1200px;
+$vp-xl: 1440px;
+
+@mixin mq($size) {
+  @media screen and (min-width: #{$size}) {
+    @content;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   box-sizing: border-box;
@@ -10,17 +22,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  @include mq($vp-xs) {
+    
+  }
 }
 
 ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .nav-item {
@@ -54,7 +64,6 @@ img.nav-item {
 .project-item {
   padding: 5px 10px 5px 10px;
   margin-top: 100px;
-  
 }
 
 .project-button {
@@ -65,31 +74,42 @@ img.nav-item {
 
 .main-welcome {
   background-color: #fdbcb4;
-  padding: 50px 10px;
+  padding: 50px 30px;
   width: 100%;
   display: flex;
-  font-size: 20px;
+  justify-content: center;
+}
 
-  @media only screen and (min-width: 992px) {
-    width: 50%;
-    background-color: pink;
+.content-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  max-width: $vp-lg;
+
+  @include mq($vp-sm) {
+    padding: 100px;
+  }
+
+  @include mq($vp-md) {
+    padding: 100px;
+    flex-direction: row;
+    column-gap: 20px;
   }
 }
 
 .main-text {
-  display: inline;
-  padding: 50px;
+  
+
 }
 
 .main-image {
-  display: inline;
-  padding-left: 20px;
-  padding-right: 50px;
+  
+
 }
 
 #colorful-image {
-  height: 450px;
-  width: 350px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .about-container {
