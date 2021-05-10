@@ -1,0 +1,6 @@
+export { default as cows} from './cows.jpg'
+export { default as castle} from './castle.jpg'
+export { default as grave} from './grave.jpg'
+export { default as dogs} from './dogs.jpg'
+export { default as moher} from './moher.jpg'
+export { default as island} from './island.jpg'

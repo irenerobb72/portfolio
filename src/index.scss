@@ -23,7 +23,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
   @include mq($vp-xs) {
-    
   }
 }
 
@@ -98,7 +97,6 @@ img.nav-item {
   justify-content: center;
 }
 
-
 .content-container {
   display: flex;
   flex-direction: column;
@@ -117,13 +115,9 @@ img.nav-item {
 }
 
 .main-text {
-  
-
 }
 
 .main-image {
-  
-
 }
 
 #colorful-image {
@@ -150,4 +144,29 @@ h1 {
 .footer-item {
   display: inline;
   padding: 10px;
+}
+
+.travel-item {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  padding: 0 calc(50% - 420px);
+  grid-gap: 80px;
+
+  @include mq($vp-sm) {
+    padding: 100px;
+  }
+
+  @include mq($vp-md) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    padding: 0 calc(50% - 420px);
+  }
+}
+
+#castle-img,
+#dogs-image,
+#cows-img,
+#moher-img,
+#island-image {
+  max-width: 100%;
+  width: 100%;
 }
