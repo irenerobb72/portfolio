@@ -43,7 +43,7 @@ function App() {
           <Project />
         </Route>
         <Route path="/">
-          <div className="main-welcome">
+          <div className="main-content">
             <div className="content-container">
               <div className="main-text">
                 <h1>My name is Irene Robb</h1>
@@ -112,21 +112,21 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="about-container">
-          <div className="content-container">
-            <div className="about-image">
-              <img src={art} alt="logopoint3" id="test-image" />
-            </div>
-            <div className="about-text">
-              <h2>What I'm all about</h2>
-              <p>
-                I am a student at the University of New Hampshire going towards
-                a degree in Information Technology. My primary skills in
-                technology are web development using JavaScript, React, HTML/CSS
-                and my other skills are SQL, Java, Python, and Bash.{" "}
-              </p>
-              <button className="project-button">Resume</button>
-            </div>
+          <div className="main-content">
+            <div className="content-container">
+              <div className="main-image">
+                <img src={art} alt="logopoint3" id="test-image" />
+              </div>
+              <div className="main-text">
+                <h2>What I'm all about</h2>
+                <p>
+                  I am a student at the University of New Hampshire going towards
+                  a degree in Information Technology. My primary skills in
+                  technology are web development using JavaScript, React, HTML/CSS
+                  and my other skills are SQL, Java, Python, and Bash.{" "}
+                </p>
+                <button className="project-button">Resume</button>
+              </div>
             </div>
           </div>
         </Route>

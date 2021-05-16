@@ -1,37 +1,67 @@
 import art from "../images/color-art.png";
-import { castle, island, dogs, cows, moher, grave } from "../images/index.js";
+import {  island, moher, grave, cliff, canyon } from "../images/index.js";
+import React, { useState } from 'react';
 
 export function Travel() {
+
+  const [image, toggleImage] = useState(false);
+
+  const handleToggle = (event) => {
+    event.stopPropagation();
+    toggleImage(true);
+  }
+
   return (
     <div className="Travel">
-      <div className="travel-container">
-        <div className="main-text">
-          <h1>Ireland</h1>
-          <p>
-            In 2019, I traveled to Ireland and went to the west coast. Some of
-            the places I visited are Dingle, Galway, Cliffs of Moher and
-            Kinsale.
-          </p>
+      <div className="main-content">
+        <div className="content-container">
+          <div className="image-container">
+            <div className="main-image one">
+              <img src={grave} alt="grave" id="grave-image" />
+            </div>   
+            <div className="main-image two">
+              <img src={cliff} alt="cliff" id="cliff-image" />
+            </div>  
+            <div className="main-image three">
+              <img src={canyon} alt="canyon" id="canyon-image" />
+            </div>   
+          </div>
+          <div className="main-image">
+            <img src={grave} alt="grave"/>
+          </div>
+          <div className="main-text">
+            <h1>Ireland</h1>
+            <p>
+              This is The Burren in County Clare, Ireland. This is a portal tomb called Poulnabrone Dolmen, a tomb from the Neolithic Period. 
+            </p>
+          </div>     
+ 
         </div>
-        <div className="travel-img-container">
-          <div className="travel-item">
-            <img src={castle} alt="castle" id="castle-image" />
-          </div>
-          <div className="travel-item">
-            <img src={island} alt="island" id="island-image" />
-          </div>
-          <div className="travel-item">
-            <img src={dogs} alt="dogs" id="dogs-image" />
-          </div>
-          <div className="travel-item">
-            <img src={cows} alt="cows" id="cows-image" />
-          </div>
-          <div className="travel-item">
-            <img src={moher} alt="moher" id="moher-image" />
-          </div>
-          <div className="travel-item">
-            <img src={grave} alt="grave" id="grave-image" />
-          </div>
+      </div>
+      <div className="main-content second" >
+        <div className="content-container">
+          <div className="main-text">
+            <h1>Australia</h1>
+            <p>
+              This is from the 12 apostles in Victoria, Australia
+            </p>
+          </div>     
+          <div className="main-image">
+            <img src={cliff} alt="cliff" id="cliff-image" />
+          </div>   
+        </div>
+      </div>
+      <div className="main-content" >
+        <div className="content-container">
+          <div className="main-text">
+            <h1>New Zealand</h1>
+            <p>
+              This is from Fiordland, New Zealand. 
+            </p>
+          </div>     
+          <div className="main-image">
+            <img src={canyon} alt="canyon" id="canyon-image" />
+          </div>   
         </div>
       </div>
     </div>
